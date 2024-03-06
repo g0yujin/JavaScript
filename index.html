@@ -7,17 +7,25 @@
 </head>
 <body>
     
-    <div class="alert-box" id="alert">알림창<button onclick="closeAlert()">닫기</button></div>
-    <button onclick="알림창열기()">버튼</button>
+    <div class="alert-box" id="alert">
+        <p id="alert-content">알림창</p>
+        <button>닫기</button>
+    </div>
+    <button onclick="아이디알림창()">버튼1</button>
+    <button onclick="비번알림창()">버튼2</button>
 
     <script>
-    
-        function 알림창열기() {
+        
+        function 아이디알림창() {
+            document.getElementById('alert-content').innerHTML='아이디입력하세요';
             document.getElementById('alert').style.display='block';
         }
         
-        function closeAlert() {
-            document.getElementById('alert').style.display='none';
+        
+        function 비번알림창() {
+            
+            document.getElementById('alert-content').innerHTML='비번을 입력하세요';
+            document.getElementById('alert').style.display='block';
         }
     
     </script>

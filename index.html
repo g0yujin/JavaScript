@@ -44,18 +44,29 @@
       
       <button id="login">로그인</button>
       
+      
+      <script>
+          //로그인 버튼 클릭시 모달창 사라짐 class탈부착으로 구현
+           $('#login').on('click', function() {
+              $('.black-bg').addClass('show-modal')
+          })
+          
+          $('#close').on('click', function(){
+              $('.black-bg').removeClass('show-modal')
+          })
+      
+      </script>
+      
+      
+      
+      
+      
+      
       <script>
           
           document.getElementsByClassName('navbar-toggler')[0].addEventListener('click',  function(){
               document.getElementsByClassName('list-group')[0].classList.toggle('show');          })
-          
-          
-          $('#login').on('click', function() {
-              $('.white-bg').css('display','block')
-          })
-          
-         
-     
+        
       </script>
       
       

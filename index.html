@@ -15,13 +15,35 @@
   <body>
       
       
-      <div class="black-bg show-mode">
+       <div class="black-bg ">
           <div class="white-bg">
             <h4>로그인하세요</h4>
-            <button class="btn btn-danger" id="close">닫기</button>
+            <form action="success.html">
+              <div class="my-3">
+                <input type="text" class="form-control" id="id">
+               </div>
+               <div class="my-3">
+                 <input type="password" class="form-control" id="password">
+               </div>
+               <button type="submit" class="btn btn-primary" id="send">전송</button>
+               <button type="button" class="btn btn-danger" id="close">닫기</button>
+            </form> 
           </div>
-        </div> 
+       </div> 
       
+      <script>
+        document.querySelector('#send').addEventListener('click', function(e){
+            if(document.querySelector('#id').value == ''){
+                e.preventDefault()
+                alert('아이디를 입력하세요')
+            }
+        })
+          
+          
+        
+      </script>
+          
+
       
    
       <nav class="navbar navbar-light bg-light">
@@ -42,7 +64,10 @@
           <li class="list-group-item">And a fifth one</li>
         </ul>
       
-      <button id="login">로그인</button>
+      <div class="main-bg">
+          <h4>Shirts on Sale</h4>
+          <button id="login" class="btn btn-danger">로그인</button>
+      </div>
       
       
       <script>

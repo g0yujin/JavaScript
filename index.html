@@ -40,13 +40,10 @@
         });
           
     
-                
-          
       </script>
           
 
       
-   
       <nav class="navbar navbar-light bg-light">
           <div class="container-fluid">
             <span class="navbar-brand">Navbar</span>
@@ -57,16 +54,20 @@
           </div>
         </nav> 
       <script>
-        
           
           var count = 0;
           
           $('.badge').on('click',function(){
               count ++;
               console.log(count);
-            
-              
           })
+          
+          if(count % 2 == 0){
+              $('.badge').html('Dark 🔄');
+          }
+          else if(count % 2 == 1){
+              $('.badge').html('Light 🔄');
+          }
           
           
       </script>

@@ -86,6 +86,35 @@
       </div>
       
       
+      
+      <div class="alert alert-danger">
+        
+        <span id="second">5</span>초 이내 구매시 사은품 증정!
+      
+      </div>
+      
+      <script>
+          
+          var count = 5;
+
+          setInterval(function(){
+              count -= 1;
+              if(count > 0){
+                  document.querySelector('#second').innerHTML = count;
+              }
+              else if(count == 0){
+                  $('.alert').hide()
+              }
+            }, 1000);
+      
+      </script>
+      
+      
+      
+      
+      
+      
+      
       <script>
           //로그인 버튼 클릭시 모달창 사라짐 class탈부착으로 구현
            $('#login').on('click', function() {
@@ -98,23 +127,8 @@
       
       </script>
       
-     <p>태조 이성계가 태어난 년도는?</p>
-    <input type="text" id="answer">
-    <button id="send-answer">제출</button>
-
-    <script>
-        
-        $('#send-answer').on('click',function(){
-            
-            if($('#answer').val() == '1335'){
-                  alert('성공');
-              }else {
-                  alert('멍청아');
-              }
-            });
-        
-      
-    </script>   
+     
+  
 
       
       <script>

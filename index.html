@@ -31,11 +31,24 @@
       
       <script>
         document.querySelector('#send').addEventListener('click', function(e){
-            if(document.querySelector('#id').value == ''){
+            
+            var 아이디 = document.querySelector('#id').value
+            var 비밀번호 = document.querySelector('#password').value
+            
+            if( 아이디 == ''){
                 e.preventDefault()
                 alert('아이디를 입력하세요')
             };
+            
+            if(/\S+@\S+\.\S+/.test(아이디) == false){
+                alert('이메일형식이 아닙니다.')
+            };
+            
+            if(/[A-Z]/.test(비밀번호)== false){
+               alert('대문자가 없습니다.')
+               }
         });
+          
           
     
       </script>
